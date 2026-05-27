@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "jeu.h"
 
 int main(void) {
     printf("Hello, World!\n");

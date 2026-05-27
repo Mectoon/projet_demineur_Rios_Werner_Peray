@@ -6,6 +6,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void afficherMenuDemineur(void) {
+    printf("\n");
+    printf("*------------------------------*\n");
+    printf("*----- Jeu de DEMINEUR -----*\n");
+    printf("1) Nouvelle Partie\n");
+    printf("2) Reprendre Partie\n");
+    printf("3) Quitter le jeu\n");
+    printf( "4) Regles du Jeu\n");
+    printf("*------------------------------*\n");
+    printf("Par Axel, Jules et Théodore\n");
+}
+
 
 void calculer_nombre_mines(Partie *p) {
     int nb_cases;
