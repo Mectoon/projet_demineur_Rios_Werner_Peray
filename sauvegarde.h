@@ -7,4 +7,3 @@
 
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 
-je nique jules qui est mineur
