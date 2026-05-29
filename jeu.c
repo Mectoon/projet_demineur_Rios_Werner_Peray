@@ -326,3 +326,5 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         p->vies--;
     }
 }
+
+PERAY
