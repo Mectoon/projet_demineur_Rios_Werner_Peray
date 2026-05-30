@@ -1,6 +1,3 @@
-//
-// Created by arios on 27/05/2026.
-//
 
 #include "jeu.h"
 #include <stdio.h>
@@ -326,5 +323,3 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         p->vies--;
     }
 }
-
-PERAY
