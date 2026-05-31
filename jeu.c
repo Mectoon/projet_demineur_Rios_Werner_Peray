@@ -69,6 +69,38 @@ void lancer_nouvelle_partie(Partie *p)
         scanf("%d", &mode);
     } while (mode < 1 || mode > 2);
 
+    p->difficulte = difficulte;
+    p->mode = mode;
+    p->etat = 0;
+    p->brouillage = 0;
+
+    if (mode == 1)
+    {
+        p->vies = 1;
+    }
+    else
+    {
+        p->vies = 3;
+    }
+
+    creer_tableau_vide(p, taille);
+    calculer_nombre_mines(p);
+    placer_bombes(p);
+
+    if (p->mode == 2)
+    {
+        placer_bonus_malus(p);
+    }
+
+    calculer_mines_autour(p);
+
+    printf("\nLa partie a bien ete creee.\n");
+    printf("Taille : %d x %d\n", p->taille, p->taille);
+    printf("Nombre de mines : %d\n", p->nb_mines);
+    printf("Nombre de vies : %d\n", p->vies);
+
+    afficher_grille(p);
+}
 
 void calculer_nombre_mines(Partie *p) {
     int nb_cases;
