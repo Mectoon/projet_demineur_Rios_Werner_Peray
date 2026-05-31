@@ -6,12 +6,12 @@ int main(void) {
     Partie *p;              //Déclaration du pointeur p vers la structure Partie
 
 
-    /////////////////////////////////////////////////////////
-    /*IL FAUT DEMANDER TAILLE DE LA GRILLE ET DIFFICULTE ! */
     afficherMenuDemineur();
+
+
     scanf("%d", &taille);
     p->taille= taille;
-    /////////////////////////////////////////////////////////
+
 
 
 
