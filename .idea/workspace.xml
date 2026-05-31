@@ -28,8 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules, début déroulement main.c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,12 +66,12 @@
     &quot;assignee&quot;: &quot;Mectoon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git&quot;,
-    &quot;accountId&quot;: &quot;f99be411-7b98-4fd8-89db-7379fae63213&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git",
+    "accountId": "d3b3b0d2-53ac-486c-828d-ddc675a5d4c1"
   }
-}</component>
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lbOndN6m" />
   </component>
@@ -109,6 +107,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -130,6 +129,7 @@
       <updated>1779886632850</updated>
       <workItem from="1779886633883" duration="731000" />
       <workItem from="1779887764643" duration="471000" />
+      <workItem from="1780236837595" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />

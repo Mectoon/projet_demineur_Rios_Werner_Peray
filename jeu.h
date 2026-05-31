@@ -136,8 +136,26 @@ void afficher_grille(Partie *p);
  * @param colonne Colonne de la case a reveler.
  * @return Rien.
  */
+
 void reveler_case(Partie *p, int ligne, int colonne);
 
-
 void afficherMenuDemineur(void);
+
+void afficher_regles(void);
+/*
+Affiche les règles du démineur lorsque l'utilisateur choisit 4 dans le menu.
+*/
+
+void lancer_nouvelle_partie(Partie *p);
+/*
+Demande à l'utilisateur la taille, la difficulté et le mode de jeu.
+Puis elle appelle les fonctions déjà faites :
+- creer_tableau_vide
+- calculer_nombre_mines
+- placer_bombes
+- placer_bonus_malus si mode bonus/malus
+- calculer_mines_autour
+- afficher_grille
+*/
+
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H

@@ -9,8 +9,6 @@ int main(void) {
     afficherMenuDemineur();
 
 
-    scanf("%d", &taille);
-    p->taille= taille;
 
 
 
