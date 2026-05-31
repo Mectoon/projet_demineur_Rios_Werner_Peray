@@ -10,7 +10,7 @@ void afficherMenuDemineur(void) {
     printf("1) Nouvelle Partie\n");
     printf("2) Reprendre Partie\n");
     printf("3) Quitter le jeu\n");
-    printf( "4) Regles du Jeu\n");
+    printf("4) Regles du Jeu\n");
     printf("*------------------------------*\n");
     printf("Par Axel, Jules et Théodore\n");
 }

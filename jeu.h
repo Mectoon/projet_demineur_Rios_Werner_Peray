@@ -138,4 +138,6 @@ void afficher_grille(Partie *p);
  */
 void reveler_case(Partie *p, int ligne, int colonne);
 
+
+void afficherMenuDemineur(void);
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
