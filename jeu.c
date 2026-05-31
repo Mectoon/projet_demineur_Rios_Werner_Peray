@@ -29,8 +29,45 @@ void afficher_regles(void)
     printf("\n");
     printf("Mode classique : le joueur joue avec une seule vie.\n");
     printf("Mode bonus/malus : des bonus et des malus peuvent apparaitre dans la grille.\n");
+    printf("Bon jeu à vous !\n");
     printf("*------------------------------*\n");
 }
+
+void lancer_nouvelle_partie(Partie *p)
+{
+    int taille;
+    int difficulte;
+    int mode;
+
+        printf("\n");
+        printf("*------------------------------*\n");
+        printf("*       NOUVELLE PARTIE !       *\n");
+        printf("*------------------------------*\n");
+
+    do
+    {
+        printf("Choisissez la taille de la grille entre 6 et 12 : ");
+        scanf("%d", &taille);
+    } while (taille < 6 || taille > 12);
+
+    do
+    {
+        printf("\nVeuillez saisir la difficulte :\n");
+        printf("1) Facile\n");
+        printf("2) Moyen\n");
+        printf("3) Difficile\n");
+        printf("Votre choix : ");
+        scanf("%d", &difficulte);
+    } while (difficulte < 1 || difficulte > 3);
+
+    do
+    {
+        printf("\nVeuillez choisir le mode de jeu :\n");
+        printf("1) Classique\n");
+        printf("2) Bonus / Malus\n");
+        printf("Votre choix : ");
+        scanf("%d", &mode);
+    } while (mode < 1 || mode > 2);
 
 
 void calculer_nombre_mines(Partie *p) {
@@ -90,7 +127,7 @@ void creer_tableau_vide(Partie *p, int taille) {
     }
 }
 
-void placer_bombes(Partie *p) {
+void placer_bombes(Partie *p){
     int bombes_placees = 0;
     int ligne;
     int colonne;

@@ -26,9 +26,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules, début déroulement main.c">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Théodore, jeu.c regles du jeu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +106,8 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
@@ -129,7 +131,7 @@
       <updated>1779886632850</updated>
       <workItem from="1779886633883" duration="731000" />
       <workItem from="1779887764643" duration="471000" />
-      <workItem from="1780236837595" duration="12000" />
+      <workItem from="1780236837595" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -163,7 +165,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780223380958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Maj Théodore, jeu.h">
+      <option name="closed" value="true" />
+      <created>1780237108454</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780237108454</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Maj Théodore, jeu.c regles du jeu">
+      <option name="closed" value="true" />
+      <created>1780237225111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1780237225111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +206,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MàJ Axel" />
     <MESSAGE value="MàJ Jules, début déroulement main.c" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ Jules, début déroulement main.c" />
+    <MESSAGE value="Maj Théodore, jeu.h" />
+    <MESSAGE value="Maj Théodore, jeu.c regles du jeu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj Théodore, jeu.c regles du jeu" />
   </component>
 </project>
