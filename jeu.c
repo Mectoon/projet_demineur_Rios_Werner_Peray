@@ -19,7 +19,7 @@ void afficher_regles(void)
 {
     printf("\n");
     printf("*------------------------------*\n");
-    printf("*        REGLES DU JEU         *\n");
+    printf("        REGLES DU JEU         \n");
     printf("*------------------------------*\n");
     printf("Le but du demineur est de reveler toutes les cases qui ne contiennent pas de mine.\n");
     printf("Si le joueur revele une mine, il perd une vie.\n");
@@ -40,7 +40,7 @@ void lancer_nouvelle_partie(Partie *p) {
 
     printf("\n");
     printf("*------------------------------*\n");
-    printf("*       NOUVELLE PARTIE !       *\n");
+    printf("       NOUVELLE PARTIE !       \n");
     printf("*------------------------------*\n");
 
     do

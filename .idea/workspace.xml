@@ -26,10 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-    </list>
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Théodore, main.c. Debut du jeu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +128,7 @@
       <updated>1779886632850</updated>
       <workItem from="1779886633883" duration="731000" />
       <workItem from="1779887764643" duration="471000" />
-      <workItem from="1780236837595" duration="2308000" />
+      <workItem from="1780236837595" duration="2755000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -213,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780238543776</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Maj Théodore, main.c. Debut du jeu">
+      <option name="closed" value="true" />
+      <created>1780239441603</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780239441603</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +249,7 @@
     <MESSAGE value="Maj Théodore, jeu.c fin programme lancer nouvelle partie. aide chat gpt l.72 à l.100" />
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante" />
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;" />
+    <MESSAGE value="Maj Théodore, main.c. Debut du jeu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj Théodore, main.c. Debut du jeu" />
   </component>
 </project>
