@@ -33,16 +33,15 @@ void afficher_regles(void)
     printf("*------------------------------*\n");
 }
 
-void lancer_nouvelle_partie(Partie *p)
-{
+void lancer_nouvelle_partie(Partie *p) {
     int taille;
     int difficulte;
     int mode;
 
-        printf("\n");
-        printf("*------------------------------*\n");
-        printf("*       NOUVELLE PARTIE !       *\n");
-        printf("*------------------------------*\n");
+    printf("\n");
+    printf("*------------------------------*\n");
+    printf("*       NOUVELLE PARTIE !       *\n");
+    printf("*------------------------------*\n");
 
     do
     {
@@ -100,6 +99,13 @@ void lancer_nouvelle_partie(Partie *p)
     printf("Nombre de vies : %d\n", p->vies);
 
     afficher_grille(p);
+    /*
+    La suite sera gerée plus tard dans la boucle de jeu :
+    - demander une ligne et une colonne
+    - réveler une case
+    - vérifier gagné ou perdu
+    - sauvegarder
+    */
 }
 
 void calculer_nombre_mines(Partie *p) {
