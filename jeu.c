@@ -15,6 +15,23 @@ void afficherMenuDemineur(void) {
     printf("Par Axel, Jules et Théodore\n");
 }
 
+void afficher_regles(void)
+{
+    printf("\n");
+    printf("*------------------------------*\n");
+    printf("*        REGLES DU JEU         *\n");
+    printf("*------------------------------*\n");
+    printf("Le but du demineur est de reveler toutes les cases qui ne contiennent pas de mine.\n");
+    printf("Si le joueur revele une mine, il perd une vie.\n");
+    printf("Les nombres affiches indiquent le nombre de mines autour de la case.\n");
+    printf("La partie est gagnee quand toutes les cases sans mine sont revelees.\n");
+    printf("La partie est perdue quand le joueur n'a plus de vie.\n");
+    printf("\n");
+    printf("Mode classique : le joueur joue avec une seule vie.\n");
+    printf("Mode bonus/malus : des bonus et des malus peuvent apparaitre dans la grille.\n");
+    printf("*------------------------------*\n");
+}
+
 
 void calculer_nombre_mines(Partie *p) {
     int nb_cases;
