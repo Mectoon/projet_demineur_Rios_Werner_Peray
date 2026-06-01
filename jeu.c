@@ -12,7 +12,7 @@ void afficherMenuDemineur(void) {
     printf("3) Quitter le jeu\n");
     printf("4) Regles du Jeu\n");
     printf("*------------------------------*\n");
-    printf("Par Axel, Jules et Théodore\n");
+    printf("Par Axel, Jules et Theodore\n");
 }
 
 void afficher_regles(void)
@@ -97,6 +97,8 @@ void lancer_nouvelle_partie(Partie *p) {
     printf("Taille : %d x %d\n", p->taille, p->taille);
     printf("Nombre de mines : %d\n", p->nb_mines);
     printf("Nombre de vies : %d\n", p->vies);
+    demarrer_chrono(p);
+    afficher_score(p);
 
     afficher_grille(p);
     /*
@@ -106,6 +108,31 @@ void lancer_nouvelle_partie(Partie *p) {
     - vérifier gagné ou perdu
     - sauvegarder
     */
+}
+
+void demarrer_chrono(Partie *p) {
+    (*p).temps = time(NULL);
+}
+
+void calculer_score(Partie *p) {
+    time_t temps_fin;
+    int duree;
+
+    temps_fin = time(NULL);
+
+    duree = (int)(temps_fin - (*p).temps); // score défini par le temps mis
+
+    (*p).score = duree;
+}
+
+void afficher_score(Partie *p) {
+    int minutes;
+    int secondes;
+
+    minutes = (*p).score / 60;
+    secondes = (*p).score % 60;
+
+    printf("Temps final : %d min %d s\n", minutes, secondes);
 }
 
 void calculer_nombre_mines(Partie *p) {
@@ -415,3 +442,4 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         p->vies--;
     }
 }
+

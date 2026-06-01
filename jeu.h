@@ -44,7 +44,56 @@ typedef struct {
     int vies;          // entre 0 et + infini
     int brouillage;    // 0 tours ou 2 tours
     int etat;          // 0 = en cours, 1 = gagne, 2 = perdu
+    int score;         // score qui dépend du temps
+    time_t temps;      // temps mis pour finir la partie
+
 } Partie;
+
+void afficherMenuDemineur(void);
+
+void afficher_regles(void);
+/*
+Affiche les règles du démineur lorsque l'utilisateur choisit 4 dans le menu.
+*/
+
+void lancer_nouvelle_partie(Partie *p);
+/*
+Demande à l'utilisateur la taille, la difficulté et le mode de jeu.
+Puis elle appelle les fonctions déjà faites :
+- creer_tableau_vide
+- calculer_nombre_mines
+- placer_bombes
+- placer_bonus_malus si mode bonus/malus
+- calculer_mines_autour
+- afficher_grille
+*/
+
+/**
+ * @brief Demarre le chronometre et initialise p->temps a 0s.
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return Rien.
+ */
+void demarrer_chrono(Partie *p);
+
+
+/**
+ * @brief Calcul le score suivant le temps et l'enregistre dans p->score.
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return Rien.
+ */
+void calculer_score(Partie *p);
+
+
+/**
+ * @brief affiche le score suivant le temps mis en secondes ou en minutes.
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return Rien.
+ */
+void afficher_score(Partie *p);
+
 
 /**
  * @brief Calcule le nombre de mines en fonction de la taille de la grille et de la difficulte.
@@ -136,26 +185,6 @@ void afficher_grille(Partie *p);
  * @param colonne Colonne de la case a reveler.
  * @return Rien.
  */
-
 void reveler_case(Partie *p, int ligne, int colonne);
-
-void afficherMenuDemineur(void);
-
-void afficher_regles(void);
-/*
-Affiche les règles du démineur lorsque l'utilisateur choisit 4 dans le menu.
-*/
-
-void lancer_nouvelle_partie(Partie *p);
-/*
-Demande à l'utilisateur la taille, la difficulté et le mode de jeu.
-Puis elle appelle les fonctions déjà faites :
-- creer_tableau_vide
-- calculer_nombre_mines
-- placer_bombes
-- placer_bonus_malus si mode bonus/malus
-- calculer_mines_autour
-- afficher_grille
-*/
 
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H

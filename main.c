@@ -2,6 +2,7 @@
 #include "jeu.h"
 #include "sauvegarde.h"
 int main(void) {
+
     int choix;              //Variable qui stocke le choix de l'utilisateur dans le menu// Variable qui stocke le choix de l'utilisateur dans le menu
     int taille=0;           //Déclaration de la variable comprenant la valeur de la largeur de la grille
     Partie *p;              //Déclaration du pointeur p vers la structure Partie
