@@ -111,7 +111,7 @@ void lancer_nouvelle_partie(Partie *p) {
 }
 
 void demarrer_chrono(Partie *p) {
-    (*p).temps = time(NULL);
+    p->temps = time(NULL);
 }
 
 void calculer_score(Partie *p) {
@@ -120,17 +120,17 @@ void calculer_score(Partie *p) {
 
     temps_fin = time(NULL);
 
-    duree = (int)(temps_fin - (*p).temps); // score défini par le temps mis
+    duree = (int)(temps_fin - p->temps); // score défini par le temps mis
 
-    (*p).score = duree;
+    p->score = duree;
 }
 
 void afficher_score(Partie *p) {
     int minutes;
     int secondes;
 
-    minutes = (*p).score / 60;
-    secondes = (*p).score % 60;
+    minutes = p->score / 60;
+    secondes = p->score % 60;
 
     printf("Temps final : %d min %d s\n", minutes, secondes);
 }
