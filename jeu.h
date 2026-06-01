@@ -44,6 +44,7 @@ typedef struct {
     int vies;          // entre 0 et + infini
     int brouillage;    // 0 tours ou 2 tours
     int etat;          // 0 = en cours, 1 = gagne, 2 = perdu
+
     int score;         // score qui dépend du temps
     time_t temps;      // temps mis pour finir la partie
 
