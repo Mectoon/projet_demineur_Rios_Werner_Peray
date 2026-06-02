@@ -3,8 +3,7 @@
 #include "sauvegarde.h"
 
 int main(void) {
-SAUV_initialisation();
-    /*int choix;              //Variable qui stocke le choix de l'utilisateur dans le menu// Variable qui stocke le choix de l'utilisateur dans le menu
+    int choix;              //Variable qui stocke le choix de l'utilisateur dans le menu// Variable qui stocke le choix de l'utilisateur dans le menu
     int taille=0;           //Déclaration de la variable comprenant la valeur de la largeur de la grille
     Partie *p;              //Déclaration du pointeur p vers la structure Partie 
     int quitter =0;
@@ -51,6 +50,6 @@ SAUV_initialisation();
         }
     }
 
-    free(p);    */                   //Libération de la mémoire à la fin du programme
+    free(p);                      //Libération de la mémoire à la fin du programme
     return 0;
 }
