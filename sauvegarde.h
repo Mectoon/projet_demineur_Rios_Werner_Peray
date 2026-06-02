@@ -11,7 +11,10 @@
  * @return Rien.
  */
 void SAUV_initialisation();
+
 void SAUV_sauvegarde(Partie p);
-void SAUV_charger_partie();
+
+void SAUV_charger_partie(Partie p);
+
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 

@@ -28,7 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner">
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
     </list>
@@ -143,7 +143,8 @@
       <workItem from="1780301829146" duration="1701000" />
       <workItem from="1780402414615" duration="214000" />
       <workItem from="1780402658968" duration="1626000" />
-      <workItem from="1780404324333" duration="3910000" />
+      <workItem from="1780404324333" duration="4128000" />
+      <workItem from="1780408565656" duration="3605000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -273,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780407174818</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="MàJ Jules Werner">
+      <option name="closed" value="true" />
+      <created>1780408477921</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780408477921</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
