@@ -8,5 +8,6 @@ void SAUV_initialisation(){
         printf("Erreur : impossible d'ouvrir le fichier sauvegarde.csv\n");
         exit(1);
     }
+    fprintf(f, "Sauvegarde");
     fclose(f);
 }
