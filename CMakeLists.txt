@@ -7,4 +7,5 @@ add_executable(projet_demineur_Rios_Werner_Peray main.c
         jeu.c
         jeu.h
         sauvegarde.c
-        sauvegarde.h)
+        sauvegarde.h
+)
