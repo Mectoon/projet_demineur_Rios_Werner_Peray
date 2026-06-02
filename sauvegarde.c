@@ -14,11 +14,16 @@ void SAUV_initialisation(){
 void SAUV_sauvegarde(Partie p)
 {
     FILE *f = fopen("..\\sauvegarde.csv", "a");
-    if (f == NULL)
+    //Ouverture du fichier sauvegarde.csv en mode sur écriture additionnelle
+
+    if (f == NULL)      //Vérification de la réussite de l'ouverture du fichier
     {
         printf("Erreur : impossible d'ouvrir le fichier sauvegarde.csv\n");
         exit(1);
     }
+
+
+
     fprintf(f,"%d,%d,%d,",p.mode,p.difficulte,p.taille);
     //Sauvegarde du mode de jeu, de la difficulté de la partie et de la taille de la grille
 
