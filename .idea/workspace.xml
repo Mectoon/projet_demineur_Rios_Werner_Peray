@@ -27,12 +27,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Création sauvegarde.csv">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sauvegarde.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +138,7 @@
       <workItem from="1780301829146" duration="1701000" />
       <workItem from="1780402414615" duration="214000" />
       <workItem from="1780402658968" duration="1626000" />
-      <workItem from="1780404324333" duration="1085000" />
+      <workItem from="1780404324333" duration="1725000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -231,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780404212352</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MàJ Jules Werner">
+      <option name="closed" value="true" />
+      <created>1780405592755</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1780405592755</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +268,7 @@
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante" />
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;" />
     <MESSAGE value="Création sauvegarde.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Création sauvegarde.csv" />
+    <MESSAGE value="MàJ Jules Werner" />
+    <option name="LAST_COMMIT_MESSAGE" value="MàJ Jules Werner" />
   </component>
 </project>

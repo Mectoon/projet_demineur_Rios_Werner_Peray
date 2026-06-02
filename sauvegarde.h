@@ -8,6 +8,6 @@
  * @brief Efface tout le contenu du fichier sauvegarde.csv
  * @return Rien.
  */
-void SAUV_init();
+void SAUV_initialisation();
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 
