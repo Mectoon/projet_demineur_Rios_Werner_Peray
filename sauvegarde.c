@@ -4,8 +4,8 @@
 #include "sauvegarde.h"
 #include  "jeu.h"
 void SAUV_initialisation(){
-    FILE *f = fopen("..\\sauvegarde.csv", "w"); //Ouverture du fichier sauvegarde.csv en mode sur écriture
-    if (f == NULL) //Vérification de la réussite de l'ouverture du fichier
+    FILE *f = fopen("..\\sauvegarde.csv", "w"); // Ouverture du fichier sauvegarde.csv en mode sur écriture
+    if (f == NULL) // Vérification de la réussite de l'ouverture du fichier
     {
         printf("Erreur : impossible d'ouvrir le fichier sauvegarde.csv\n");
         exit(1);
@@ -15,13 +15,13 @@ void SAUV_initialisation(){
 
 void SAUV_charger_partie(Partie *p)
 {
-    char ligne[5][1024];        //Création d'un tableau de 5 lignes avec 1024 caractères par ligne,
+    char ligne[5][1024];        // Création d'un tableau de 5 lignes avec 1024 caractères par ligne,
     // collectant le contenu du fichier de sauvegarde
-    char temporaire[1024];      //Création d'un tableau de stockage temporaire pour copier le contenu
+    char temporaire[1024];      // Création d'un tableau de stockage temporaire pour copier le contenu
     // du fichier avant d'introduire dans le tableau ligne
-    int num_ligne = 0;          //Déclaration d'une variable entière indiquant le numéro de ligne sur laquelle on extrait les données
-    FILE *f = fopen("..\\sauvegarde.csv", "r"); //Ouverture du fichier sauvegarde.csv en mode lecture
-    if (f == NULL)   //Vérification de la réussite de l'ouverture du fichier
+    int num_ligne = 0;          // Déclaration d'une variable entière indiquant le numéro de ligne sur laquelle on extrait les données
+    FILE *f = fopen("..\\sauvegarde.csv", "r"); // Ouverture du fichier sauvegarde.csv en mode lecture
+    if (f == NULL)   // Vérification de la réussite de l'ouverture du fichier
     {
         printf("Erreur : impossible d'ouvrir le fichier sauvegarde.csv\n");
         exit(1);
@@ -33,7 +33,7 @@ void SAUV_charger_partie(Partie *p)
         num_ligne++;
     }
     fclose(f);
-    //Chargement des données sauvegardées dans la structure Partie
+    // Chargement des données sauvegardées dans la structure Partie
     // Ligne 1 : paramètres généraux
     sscanf(ligne[0], "%d,%d,%d,%d,%d,%d,%d",
            &p->mode,
@@ -59,21 +59,22 @@ void SAUV_charger_partie(Partie *p)
 
 void SAUV_charger_coordonnees(Partie *p, const char *ligne, const char *champ)
 {
-    char temporaire[1024];
+    char temporaire[1024];  // Copie locale de la ligne pour éviter de modifier l'originale
     strcpy(temporaire, ligne);
 
-    char *couple = strtok(temporaire, ",");
+    char *couple = strtok(temporaire, ","); // Extraction d'un couple "x-y" séparé par des virgules
 
-    while (couple != NULL)
+    while (couple != NULL)  // Parcours de tous les couples présents dans la ligne
     {
-        char *x_str = strtok(couple, "-");
-        char *y_str = strtok(NULL, "-");
+        char *x_str = strtok(couple, "-");  // Récupération de la partie avant le tiret, coordonnée x
+        char *y_str = strtok(NULL, "-");    // Récupération de la partie après le tiret, coordonnée y
 
-        if (x_str && y_str!=NULL)
+        if (x_str && y_str!=NULL)   // Vérification que les deux valeurs x et y existent
         {
-            int x = atoi(x_str);
-            int y = atoi(y_str);
+            int x = atoi(x_str);    //x_str chaîne transformée en entier x
+            int y = atoi(y_str);    //y_str chaîne transformée en entier y
 
+            // Activation du champ correspondant dans la grille selon le type demandé
             if (strcmp(champ, "mine") == 0)
                 p->grille[x][y].mine = 1;
 
@@ -87,7 +88,7 @@ void SAUV_charger_coordonnees(Partie *p, const char *ligne, const char *champ)
                 p->grille[x][y].malus = 1;
         }
 
-        couple = strtok(NULL, ",");
+        couple = strtok(NULL, ","); // Passage au couple suivant dans la ligne
     }
 }
 void SAUV_sauvegarde(Partie *p)
