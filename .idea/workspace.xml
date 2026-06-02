@@ -28,7 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner">
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,6 +117,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jules\IF2 CLION\IF2 PROJET DEMINEUR" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="projet_demineur_Rios_Werner_Peray" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projet_demineur_Rios_Werner_Peray" TARGET_NAME="projet_demineur_Rios_Werner_Peray" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projet_demineur_Rios_Werner_Peray" RUN_TARGET_NAME="projet_demineur_Rios_Werner_Peray">
       <method v="2">
@@ -137,7 +142,7 @@
       <workItem from="1780301829146" duration="1701000" />
       <workItem from="1780402414615" duration="214000" />
       <workItem from="1780402658968" duration="1626000" />
-      <workItem from="1780404324333" duration="2107000" />
+      <workItem from="1780404324333" duration="2449000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -243,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780406230928</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="MàJ Jules Werner">
+      <option name="closed" value="true" />
+      <created>1780406476419</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780406476419</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
