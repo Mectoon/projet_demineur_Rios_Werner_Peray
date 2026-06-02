@@ -15,6 +15,7 @@ int main(void) {
         printf("Erreur d'allocation mémoire\n");
         return 1;
     }
+
     while (quitter == 0) {
         afficherMenuDemineur();
 
@@ -24,6 +25,12 @@ int main(void) {
         switch (choix) {
             case 1:
                 lancer_nouvelle_partie(p);
+                p->tour=1;
+                while ( p->vies >0)
+                {
+                                            //POUR PLUS TARD : mettre gestion_malus avant affichage_grille
+                    p->tour++;
+                }
                 break;
 
             case 2:

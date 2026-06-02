@@ -23,7 +23,7 @@ typedef struct {
 
     int bonus;         // 1 = bonus present, 0 = pas de bonus
     int bonus_reveal;  // 1 = bonus revelation present, 0 = pas de bonus revelation
-    int malus;         // 1 = malus present, 0 = pas de malus
+    int malus;         // 1 = malus présent à cette case , 0 = pas de malus présent à cette case
 } Case;
 
 /**
@@ -32,7 +32,7 @@ typedef struct {
  */
 typedef struct {
     Case grille[max][max];
-
+    int tour;          // numéro actuel du tour
     int taille;        // taille de la grille : entre 6 et 12
     int difficulte;    // 1 = facile, 2 = moyen, 3 = difficile
     int mode;          // 1 = classique, 2 = bonus/malus
@@ -40,9 +40,10 @@ typedef struct {
     int nb_mines;      // nombre total de mines
     int nb_bonus;      // nombre total de bonus
     int nb_malus;      // nombre total de malus
+    int malus;         // malus activé ou non à ce tour, 1 = malus activé, 0 = pas de malus en cours
+    int tour_malus;    // numéro du tour d'activation du dernier malus
 
     int vies;          // entre 0 et + infini
-    int brouillage;    // 0 tours ou 2 tours
     int etat;          // 0 = en cours, 1 = gagne, 2 = perdu
 
     int score;         // score qui dépend du temps
@@ -187,5 +188,15 @@ void afficher_grille(Partie *p);
  * @return Rien.
  */
 void reveler_case(Partie *p, int ligne, int colonne);
-
+/**
+ * @brief Met à jour l'état du malus en fonction du nombre de tours restants avec le malus activé.
+ *
+ * La fonction calcule le nombre de tours pendant lesquels le malus doit encore être actif.
+ * Si le malus est toujours en cours, la variable correspondante dans la structure Partie est activée.
+ * À chaque appel, le compteur de tours restants pour le malus est décrémenté.
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return Rien.
+ */
+void gestion_malus(Partie *p);
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H

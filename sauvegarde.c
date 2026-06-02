@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "sauvegarde.h"
 #include  "jeu.h"
 void SAUV_initialisation(){
@@ -27,29 +28,14 @@ void SAUV_sauvegarde(Partie p)
     fprintf(f,"%d,%d,%d,",p.mode,p.difficulte,p.taille);
     //Sauvegarde du mode de jeu, de la difficulté de la partie et de la taille de la grille
 
-    fprintf(f,"\n");
+    fprintf(f,"\n");        //Retour à la ligne pour sauvegarde des prochaines informations
 
-    for (int i = 0; i < p.taille; i++) {        //Sauvegarde des positions des mines de la forme x-y
-        for (int j = 0; j < p.taille; j++) {
+    ecrire_coordonnees(p,f,"mine");       //Sauvegarde des positions des mines de la forme x-y
 
-            if (p.grille[i][j].mine == 1) {
-                fprintf(f, "%d-%d,", i, j);
-            }
-        }
-    }
+    fprintf(f,"\n");        //Retour à la ligne pour sauvegarde des prochaines informations
 
-    fprintf(f,"\n");
+    ecrire_coordonnees(p,f,"taille");          //Sauvegarde des positions des cases relevées de la forme x-y
 
-    for (int i = 0; i < p.taille; i++)          //Sauvegarde des positions des cases relevées de la forme x-y
-    {
-        for (int j = 0; j < p.taille; j++)
-        {
-            if (p.grille[i][j].visible == 1)
-            {
-                fprintf(f, "%d-%d,", p.grille[i][j].visible);
-            }
-        }
-    }
 
 
     fclose(f);
@@ -64,4 +50,34 @@ void SAUV_charger_partie(Partie p)
     }
     fscanf(f,"%d",&p.mode);
     fclose(f);
+}
+
+void ecrire_coordonnees(Partie p, FILE *f, const char *champ)
+{
+    for (int i = 0; i < p.taille; i++)
+    {
+        for (int j = 0; j < p.taille; j++)
+        {
+            int valeur = 0; //Définition d'une variable qui vaut 1 si la case de coordonnées (i,j)
+                            // du paramètre "champ" concerné vaut 1 et 0 sinon
+            if (strcmp(champ, "visible") == 0)  //Recherche du paramètre à modifier en fonction de la chaîne "champ"
+                {
+                valeur = p.grille[i][j].visible;
+                }
+            else if (strcmp(champ, "mine") == 0)
+                {
+                valeur = p.grille[i][j].mine;
+                }
+            else if (strcmp(champ, "bonus") == 0)
+                {
+                valeur = p.grille[i][j].bonus;
+                }
+            else if (strcmp(champ, "malus") == 0)
+                {
+                valeur = p.grille[i][j].malus;
+                }
+            if (valeur == 1)
+                fprintf(f, "%d-%d,", i, j);
+        }
+    }
 }
