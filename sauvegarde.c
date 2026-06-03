@@ -109,15 +109,15 @@ void SAUV_sauvegarde(Partie *p)
 
     fprintf(f,"\n");        //Retour à la ligne pour sauvegarde des prochaines informations
 
-    ecrire_coordonnees(p,f,"mine");           //Sauvegarde des positions des mines de la forme x-y
-    ecrire_coordonnees(p,f,"taille");         //Sauvegarde des positions des cases relevées de la forme x-y
-    ecrire_coordonnees(p,f,"malus");          //Sauvegarde des positions des cases malus de la forme x-y
-    ecrire_coordonnees(p,f,"bonus");          //Sauvegarde des positions des cases bonus de la forme x-y
+    SAUV_ecrire_coordonnees(p,f,"mine");           //Sauvegarde des positions des mines de la forme x-y
+    SAUV_ecrire_coordonnees(p,f,"taille");         //Sauvegarde des positions des cases relevées de la forme x-y
+    SAUV_ecrire_coordonnees(p,f,"malus");          //Sauvegarde des positions des cases malus de la forme x-y
+    SAUV_ecrire_coordonnees(p,f,"bonus");          //Sauvegarde des positions des cases bonus de la forme x-y
 
 
     fclose(f);
 }
-void ecrire_coordonnees(Partie *p, FILE *f, const char *champ)
+void SAUV_ecrire_coordonnees(Partie *p, FILE *f, const char *champ)
 {
     for (int i = 0; i < p->taille; i++)
     {

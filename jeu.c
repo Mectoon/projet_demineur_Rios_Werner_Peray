@@ -447,7 +447,7 @@ void reveler_case(Partie *p, int ligne, int colonne) {
     // Si la case contient un malus, il s'active et le numéro du tour d'activation du malus est enregistré
     if (p->grille[ligne][colonne].malus == 1)
     {
-        printf("Un Malus a ete active !\nLe plateau devient est cache pour 2 tours !! \n");
+        printf("Un Malus a ete active !\nLe plateau est caché pour 2 tours !! \n");
         p->tour=p->tour_malus;
     }
     if (p->grille[ligne][colonne].bonus == 1)

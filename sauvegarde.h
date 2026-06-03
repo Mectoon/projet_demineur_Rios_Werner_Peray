@@ -38,6 +38,6 @@ void SAUV_charger_coordonnees(Partie *p, const char *ligne, const char *champ);
 
 
 void SAUV_sauvegarde(Partie *p);
-void ecrire_coordonnees(Partie *p, FILE *f, const char *champ);
+void SAUV_ecrire_coordonnees(Partie *p, FILE *f, const char *champ);
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 

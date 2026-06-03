@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
   </component>
@@ -28,8 +28,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner, là les mecs j'ai charbonné xD">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,15 +71,12 @@
     &quot;assignee&quot;: &quot;Mectoon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git&quot;,
-    &quot;accountId&quot;: &quot;80eb2b49-63f6-425d-8439-75cc27475fb0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git",
+    "accountId": "f99be411-7b98-4fd8-89db-7379fae63213"
   }
-}</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/jeu.c" root0="FORCE_HIGHLIGHTING" />
-  </component>
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lbOndN6m" />
   </component>
@@ -145,8 +146,7 @@
       <workItem from="1780301829146" duration="1701000" />
       <workItem from="1780402414615" duration="214000" />
       <workItem from="1780402658968" duration="1626000" />
-      <workItem from="1780404324333" duration="4128000" />
-      <workItem from="1780408565656" duration="12780000" />
+      <workItem from="1780404324333" duration="2752000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -268,55 +268,7 @@
       <option name="project" value="LOCAL" />
       <updated>1780407099673</updated>
     </task>
-    <task id="LOCAL-00016" summary="MàJ Jules Werner">
-      <option name="closed" value="true" />
-      <created>1780407174818</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1780407174818</updated>
-    </task>
-    <task id="LOCAL-00017" summary="MàJ Jules Werner">
-      <option name="closed" value="true" />
-      <created>1780408477921</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1780408477921</updated>
-    </task>
-    <task id="LOCAL-00018" summary="MàJ Jules Werner">
-      <option name="closed" value="true" />
-      <created>1780417235975</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1780417235975</updated>
-    </task>
-    <task id="LOCAL-00019" summary="MàJ Jules Werner">
-      <option name="closed" value="true" />
-      <created>1780417352267</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1780417352267</updated>
-    </task>
-    <task id="LOCAL-00020" summary="MàJ Jules Werner sur plusieurs fonctions du jeu.c dans le cadre de la gestion de malus/bonus, modification/ créations de nouveau paramètres dans les struct jeu.h et quelques ajouts dans le main.c concernant le déroulement de la partie">
-      <option name="closed" value="true" />
-      <created>1780422145110</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1780422145110</updated>
-    </task>
-    <task id="LOCAL-00021" summary="MàJ Jules Werner, là les mecs j'ai charbonné xD">
-      <option name="closed" value="true" />
-      <created>1780429544999</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1780429544999</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,8 +301,6 @@
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;" />
     <MESSAGE value="Création sauvegarde.csv" />
     <MESSAGE value="MàJ Jules Werner" />
-    <MESSAGE value="MàJ Jules Werner sur plusieurs fonctions du jeu.c dans le cadre de la gestion de malus/bonus, modification/ créations de nouveau paramètres dans les struct jeu.h et quelques ajouts dans le main.c concernant le déroulement de la partie" />
-    <MESSAGE value="MàJ Jules Werner, là les mecs j'ai charbonné xD" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ Jules Werner, là les mecs j'ai charbonné xD" />
+    <option name="LAST_COMMIT_MESSAGE" value="MàJ Jules Werner" />
   </component>
 </project>
