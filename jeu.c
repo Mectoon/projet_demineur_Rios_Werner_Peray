@@ -440,8 +440,6 @@ void reveler_case(Partie *p, int ligne, int colonne) {
     // Si la case contient une mine, le joueur perd une vie
     if (p->grille[ligne][colonne].mine == 1) {
         printf("Mine touchee !\n");
-
-        // Perd une vie
         p->vies--;
     }
     // Si la case contient un malus, il s'active et le numéro du tour d'activation du malus est enregistré

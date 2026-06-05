@@ -26,7 +26,7 @@ int main(void) {
             case 1:
                 lancer_nouvelle_partie(p);
                 p->tour=1;
-                while ( p->vies >0)
+                while ( p->vies >0) // Compte des tours tant que le joueur a encore des vies
                 {
                                             //POUR PLUS TARD : mettre gestion_malus avant affichage_grille
                     p->tour++;
