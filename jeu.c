@@ -125,6 +125,7 @@ void lancer_nouvelle_partie(Partie *p) {
 
 void demarrer_chrono(Partie *p) {
     p->temps = time(NULL);
+    p->score = 0;
 }
 
 void calculer_score(Partie *p) {
@@ -200,6 +201,7 @@ void creer_tableau_vide(Partie *p, int taille) {
             // calculer_mines_autour() changera ce paramètre
             p->grille[i][j].nb_mines = 0;
             p->grille[i][j].bonus = 0;
+            p->grille[i][j].bonus_reveal = 0;
             p->grille[i][j].malus = 0;
         }
     }
@@ -383,42 +385,38 @@ void afficher_grille(Partie *p) {
 
     printf("\n   ");
 
-    // Affichage numéros de colonnes
+    // Affichage des numéros de colonnes
     for (j = 0; j < p->taille; j++) {
         printf("%2d ", j);
     }
 
     printf("\n");
 
-    // Parcours des lignes
+    // Parcours des lignes de la grille
     for (i = 0; i < p->taille; i++) {
-
-        // Affichage du numéro de ligne
         printf("%2d ", i);
 
-        // Parcours des colonnes
+        // Parcours des colonnes de la ligne
         for (j = 0; j < p->taille; j++) {
 
-            // Si la case est cachée
-            if (p->grille[i][j].visible == 0) {
-                printf(" - ");
+            // Si un malus est actif, toute la grille est brouilée
+            if (p->malus == 1) {
+                printf(" ? ");
             }
 
-            // Si la case est visible
+            // Si la case est cachée
+            else if (p->grille[i][j].visible == 0) {
+                printf(" - ");
+            }
             else {
-
                 // Si la case contient une mine
                 if (p->grille[i][j].mine == 1) {
                     printf(" X ");
                 }
-
-                // Sinon, on affiche le nombre de mines autour
                 else {
+                    // Sinon on affiche le nombre de lignes autour
                     printf(" %d ", p->grille[i][j].nb_mines);
                 }
-
-                //Si il y a un malus en cours
-                if (p->malus==1) printf(" ? ");
             }
         }
 
@@ -433,15 +431,17 @@ void afficher_grille(Partie *p) {
  * - si la case contient une mine
  */
 void reveler_case(Partie *p, int ligne, int colonne) {
+    int i;
+    int j;
+
     // Vérification : la ligne et la colonne doivent être dans la grille
     if (ligne < 0 || ligne >= p->taille ||
         colonne < 0 || colonne >= p->taille) {
-
         printf("Coordonnees invalides.\n");
         return;
         }
 
-    // Si la case est déjà visible
+    // Si la case est déjà visible, on ne peut pas la rejouer
     if (p->grille[ligne][colonne].visible == 1) {
         printf("Cette case est deja visible.\n");
         return;
@@ -455,25 +455,65 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         printf("Mine touchee !\n");
         p->vies--;
     }
-    // Si la case contient un malus, il s'active et le numéro du tour d'activation du malus est enregistré
-    if (p->grille[ligne][colonne].malus == 1)
-    {
-        printf("Un Malus a ete active !\nLe plateau est caché pour 2 tours !! \n");
-        p->tour=p->tour_malus;
+
+    // Si la case contient un malus, il s'active pendant 2 tours
+    if (p->grille[ligne][colonne].malus == 1) {
+        printf("Un malus a ete active !\n");
+        printf("La grille sera cachee pendant 2 tours.\n");
+
+        // Le malus devient actif
+        p->malus = 1;
+
+        // On enregistre jusqu'à quel tour le malus reste actif
+        p->tour_malus = p->tour + 2;
     }
-    if (p->grille[ligne][colonne].bonus == 1)
-    {
-        printf("Genial! Vous avez gagne une vie grace a un bonus !\n");
+
+    // Si la case contient un bonus, le joueur gagne une vie
+    if (p->grille[ligne][colonne].bonus == 1) {
+        printf("Genial ! Vous avez gagne une vie.\n");
         p->vies++;
+    }
+
+    // Si la case contient un bonus revelation, on affiche les mines
+    if (p->grille[ligne][colonne].bonus_reveal == 1) {
+        printf("Bonus revelation active !\n");
+        printf("Positions des mines : ");
+
+        // Parcours de toute la grille pour afficher les mines
+        for (i = 0; i < p->taille; i++) {
+            for (j = 0; j < p->taille; j++) {
+                if (p->grille[i][j].mine == 1) {
+                    printf("(%d,%d) ", i, j);
+                }
+            }
+        }
+
+        printf("\n");
     }
 }
 void gestion_malus(Partie *p){
-    int tour_malus_restant=0;
-    tour_malus_restant = p->tour-p->tour_malus; //Calcul du nombre restant de tours avec le malus
-    if (tour_malus_restant>0)
-    {
-        p->malus=1; //Effet de malus activé
+    if (p->malus == 1 && p->tour > p->tour_malus) {
+        p->malus = 0;
+    }
+}
+
+int partie_gagnee(Partie *p) {
+    int i;
+    int j;
+
+    // Parcours toutes les lignes de la grille
+    for (i = 0; i < p->taille; i++) {
+
+        // Parcours toutes les colonnes de la grille
+        for (j = 0; j < p->taille; j++) {
+
+            // Si case ne contient pas de mine et n'est pas encore visible,alors partie n'est pas encore gagnée
+            if (p->grille[i][j].mine == 0 && p->grille[i][j].visible == 0) {
+                return 0;
+            }
+        }
     }
 
-    p->tour_malus--;    // Décrémentation du compteur de tours avec le malus activé
+    // Si toutes les cases sans mine sont révélées, la partie est gagnée
+    return 1;
 }

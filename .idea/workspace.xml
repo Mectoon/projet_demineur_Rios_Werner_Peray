@@ -28,9 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Jules Werner">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj jeu.c Explication Regles du jeu Theodore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780754179235</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Maj jeu.h Theodore">
+      <option name="closed" value="true" />
+      <created>1780756093331</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780756093331</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Maj jeu.c Explication Regles du jeu Theodore">
+      <option name="closed" value="true" />
+      <created>1780756326322</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1780756326322</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +322,8 @@
     <MESSAGE value="Maj Théodore, jeu.c, explication partie manquante &quot;lancer nouvelle partie&quot;" />
     <MESSAGE value="Création sauvegarde.csv" />
     <MESSAGE value="MàJ Jules Werner" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ Jules Werner" />
+    <MESSAGE value="Maj jeu.h Theodore" />
+    <MESSAGE value="Maj jeu.c Explication Regles du jeu Theodore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj jeu.c Explication Regles du jeu Theodore" />
   </component>
 </project>
