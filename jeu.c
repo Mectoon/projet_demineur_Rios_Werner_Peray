@@ -23,12 +23,25 @@ void afficher_regles(void)
     printf("*------------------------------*\n");
     printf("Le but du demineur est de reveler toutes les cases qui ne contiennent pas de mine.\n");
     printf("Si le joueur revele une mine, il perd une vie.\n");
-    printf("Les nombres affiches indiquent le nombre de mines autour de la case.\n");
+    printf("Une case affiche un nombre qui indique combien de\n");
+    printf("mines se trouvent autour d'elle.\n\n");
+
+    printf("MODE CLASSIQUE :\n");
+    printf("- 1 seule vie\n");
+    printf("- aucun bonus / malus\n");
+    printf("\n");
+
+    printf("MODE BONUS / MALUS :\n");
+    printf("- 3 vies au depart\n");
+    printf("- bonus : +1 vie\n");
+    printf("- bonus revelation : affiche les positions des mines\n");
+    printf("- malus : cache la grille pendant 2 tours\n\n");
+    printf("\n");
+
     printf("La partie est gagnee quand toutes les cases sans mine sont revelees.\n");
     printf("La partie est perdue quand le joueur n'a plus de vie.\n");
     printf("\n");
-    printf("Mode classique : le joueur joue avec une seule vie.\n");
-    printf("Mode bonus/malus : des bonus et des malus peuvent apparaitre dans la grille.\n");
+
     printf("Bon jeu à vous !\n");
     printf("*------------------------------*\n");
 }
