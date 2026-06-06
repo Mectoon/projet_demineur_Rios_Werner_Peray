@@ -33,10 +33,10 @@ int main(void) {
 
             case 2:
                 if (SAUV_charger_partie(p) == 1) {
-                    printf("\nPartie chargee avec succes.\n");
+                    printf("\nPartie chargee, amusez vous bien !\n");
                     jouer_partie(p);
                 } else {
-                    printf("\nAucune sauvegarde disponible.\n");
+                    printf("\nAucune sauvegarde.\n");
                 }
                 break;
 

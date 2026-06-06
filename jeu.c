@@ -23,8 +23,8 @@ void afficher_regles(void)
     printf("*------------------------------*\n");
     printf("Le but du demineur est de reveler toutes les cases qui ne contiennent pas de mine.\n");
     printf("Si le joueur revele une mine, il perd une vie.\n");
-    printf("Une case affiche un nombre qui indique combien de\n");
-    printf("mines se trouvent autour d'elle.\n\n");
+    printf("Une case affiche un nombre qui indique combien de mines se trouvent autour d'elle\n");
+    printf("\n");
 
     printf("MODE CLASSIQUE :\n");
     printf("- 1 seule vie\n");
