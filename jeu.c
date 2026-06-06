@@ -12,7 +12,7 @@ void afficherMenuDemineur(void) {
     printf("3) Quitter le jeu\n");
     printf("4) Regles du Jeu\n");
     printf("*------------------------------*\n");
-    printf("Par Axel, Jules et Théodore\n");
+    printf("Par Axel, Jules et Theodore\n");
 }
 
 void afficher_regles(void)
@@ -71,8 +71,8 @@ void lancer_nouvelle_partie(Partie *p) {
     p->difficulte = difficulte;
     p->mode = mode;
     p->etat = 0;
-    p->brouillage = 0;
-
+    p->tour=0;
+    p->malus=0;
     if (mode == 1)
     {
         p->vies = 1;
@@ -97,6 +97,8 @@ void lancer_nouvelle_partie(Partie *p) {
     printf("Taille : %d x %d\n", p->taille, p->taille);
     printf("Nombre de mines : %d\n", p->nb_mines);
     printf("Nombre de vies : %d\n", p->vies);
+    demarrer_chrono(p);
+    afficher_score(p);
 
     afficher_grille(p);
     /*
@@ -106,6 +108,31 @@ void lancer_nouvelle_partie(Partie *p) {
     - vérifier gagné ou perdu
     - sauvegarder
     */
+}
+
+void demarrer_chrono(Partie *p) {
+    p->temps = time(NULL);
+}
+
+void calculer_score(Partie *p) {
+    time_t temps_fin;
+    int duree;
+
+    temps_fin = time(NULL);
+
+    duree = (int)(temps_fin - p->temps); // score défini par le temps mis
+
+    p->score = duree;
+}
+
+void afficher_score(Partie *p) {
+    int minutes;
+    int secondes;
+
+    minutes = p->score / 60;
+    secondes = p->score % 60;
+
+    printf("Temps final : %d min %d s\n", minutes, secondes);
 }
 
 void calculer_nombre_mines(Partie *p) {
@@ -376,6 +403,9 @@ void afficher_grille(Partie *p) {
                 else {
                     printf(" %d ", p->grille[i][j].nb_mines);
                 }
+
+                //Si il y a un malus en cours
+                if (p->malus==1) printf(" ? ");
             }
         }
 
@@ -407,11 +437,30 @@ void reveler_case(Partie *p, int ligne, int colonne) {
     // On rend la case visible
     p->grille[ligne][colonne].visible = 1;
 
-    // Si la case contient une mine, la partie est perdue
+    // Si la case contient une mine, le joueur perd une vie
     if (p->grille[ligne][colonne].mine == 1) {
         printf("Mine touchee !\n");
-
-        // Perd une vie
         p->vies--;
     }
+    // Si la case contient un malus, il s'active et le numéro du tour d'activation du malus est enregistré
+    if (p->grille[ligne][colonne].malus == 1)
+    {
+        printf("Un Malus a ete active !\nLe plateau est caché pour 2 tours !! \n");
+        p->tour=p->tour_malus;
+    }
+    if (p->grille[ligne][colonne].bonus == 1)
+    {
+        printf("Genial! Vous avez gagne une vie grace a un bonus !\n");
+        p->vies++;
+    }
+}
+void gestion_malus(Partie *p){
+    int tour_malus_restant=0;
+    tour_malus_restant = p->tour-p->tour_malus; //Calcul du nombre restant de tours avec le malus
+    if (tour_malus_restant>0)
+    {
+        p->malus=1; //Effet de malus activé
+    }
+
+    p->tour_malus--;    // Décrémentation du compteur de tours avec le malus activé
 }
