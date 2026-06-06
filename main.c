@@ -36,7 +36,7 @@ int main(void) {
                     printf("\nPartie chargee, amusez vous bien !\n");
                     jouer_partie(p);
                 } else {
-                    printf("\nAucune sauvegarde.\n");
+                    printf("\nAucune sauvegarde dispo.\n");
                 }
                 break;
 
