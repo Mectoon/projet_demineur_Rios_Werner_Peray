@@ -22,7 +22,7 @@ void SAUV_initialisation();
  * @param p Pointeur vers la structure Partie à remplir.
  * @return Rien.
  */
-void SAUV_charger_partie(Partie *p);
+int SAUV_charger_partie(Partie *p);
 /**
  * @brief Charge des coordonnées de la forme x-y dans la grille.
  *

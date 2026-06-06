@@ -13,7 +13,7 @@ void SAUV_initialisation(){
     fclose(f);
 }
 
-void SAUV_charger_partie(Partie *p)
+int SAUV_charger_partie(Partie *p)
 {
     char ligne[5][1024];        // Création d'un tableau de 5 lignes avec 1024 caractères par ligne,
     // collectant le contenu du fichier de sauvegarde
@@ -55,6 +55,12 @@ void SAUV_charger_partie(Partie *p)
 
     // Ligne 5 : bonus
     SAUV_charger_coordonnees(p, ligne[4], "bonus");
+
+    // Recalcul des nombres autour des mines
+    calculer_mines_autour(p);
+
+    // La sauvegarde a bien été chargée
+    return 1;
 }
 
 void SAUV_charger_coordonnees(Partie *p, const char *ligne, const char *champ)
@@ -110,7 +116,7 @@ void SAUV_sauvegarde(Partie *p)
     fprintf(f,"\n");        //Retour à la ligne pour sauvegarde des prochaines informations
 
     SAUV_ecrire_coordonnees(p,f,"mine");           //Sauvegarde des positions des mines de la forme x-y
-    SAUV_ecrire_coordonnees(p,f,"taille");         //Sauvegarde des positions des cases relevées de la forme x-y
+    SAUV_ecrire_coordonnees(p,f,"visible");         //Sauvegarde des positions des cases relevées de la forme x-y
     SAUV_ecrire_coordonnees(p,f,"malus");          //Sauvegarde des positions des cases malus de la forme x-y
     SAUV_ecrire_coordonnees(p,f,"bonus");          //Sauvegarde des positions des cases bonus de la forme x-y
 

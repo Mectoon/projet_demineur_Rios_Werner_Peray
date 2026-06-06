@@ -28,9 +28,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj jeu.c Explication Regles du jeu Theodore">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj jeu.c correction certaines ligne Theodore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780756326322</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Maj jeu.c correction certaines ligne Theodore">
+      <option name="closed" value="true" />
+      <created>1780757294226</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780757294226</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +333,7 @@
     <MESSAGE value="MàJ Jules Werner" />
     <MESSAGE value="Maj jeu.h Theodore" />
     <MESSAGE value="Maj jeu.c Explication Regles du jeu Theodore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj jeu.c Explication Regles du jeu Theodore" />
+    <MESSAGE value="Maj jeu.c correction certaines ligne Theodore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj jeu.c correction certaines ligne Theodore" />
   </component>
 </project>
