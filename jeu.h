@@ -10,7 +10,7 @@
 #include <time.h>
 
 #define max 12
-#define FICHIER_SAUVEGARDE "sauvegarde.txt"
+#define FICHIER_SAUVEGARDE "sauvegarde.csv"
 
 /**
  * @struct Case
@@ -199,4 +199,13 @@ void reveler_case(Partie *p, int ligne, int colonne);
  * @return Rien.
  */
 void gestion_malus(Partie *p);
+
+int partie_gagnee(Partie *p);
+/**
+Verifie si la partie est gagnee.
+La fonction parcourt toute la grille et regarde s'il reste
+au moins une case sans mine qui n'a pas encore ete revelee.
+- si toutes les cases sans mine sont revelees, elle retourne 1
+- sinon, elle retourne 0
+*/
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
