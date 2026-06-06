@@ -28,10 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj jeu.c correction certaines ligne Theodore">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj sauvegarde.c correction certaines ligne Theodore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sauvegarde.c" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780757294226</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Maj sauvegarde.c correction certaines ligne Theodore">
+      <option name="closed" value="true" />
+      <created>1780758280003</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1780758280003</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +341,7 @@
     <MESSAGE value="Maj jeu.h Theodore" />
     <MESSAGE value="Maj jeu.c Explication Regles du jeu Theodore" />
     <MESSAGE value="Maj jeu.c correction certaines ligne Theodore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj jeu.c correction certaines ligne Theodore" />
+    <MESSAGE value="Maj sauvegarde.c correction certaines ligne Theodore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj sauvegarde.c correction certaines ligne Theodore" />
   </component>
 </project>
