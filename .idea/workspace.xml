@@ -28,10 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ AXEL">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Theo Ajout fonction jouer_partie jeu.h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,12 +69,12 @@
     &quot;assignee&quot;: &quot;Mectoon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git&quot;,
-    &quot;accountId&quot;: &quot;f99be411-7b98-4fd8-89db-7379fae63213&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git",
+    "accountId": "d3b3b0d2-53ac-486c-828d-ddc675a5d4c1"
   }
-}</component>
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lbOndN6m" />
   </component>
@@ -146,6 +145,7 @@
       <workItem from="1780402414615" duration="214000" />
       <workItem from="1780402658968" duration="1626000" />
       <workItem from="1780404324333" duration="2752000" />
+      <workItem from="1780945641459" duration="894000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -331,7 +331,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780908712382</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Maj Theo explication fonction partie gagnée">
+      <option name="closed" value="true" />
+      <created>1780945790514</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780945790514</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Maj Theo Ajout fonction jouer_partie jeu.h">
+      <option name="closed" value="true" />
+      <created>1780946052905</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1780946052905</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +387,8 @@
     <MESSAGE value="Maj main.c deroulement partie" />
     <MESSAGE value="Maj jeu.c Regles du jeu Theodore" />
     <MESSAGE value="MàJ AXEL" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ AXEL" />
+    <MESSAGE value="Maj Theo explication fonction partie gagnée" />
+    <MESSAGE value="Maj Theo Ajout fonction jouer_partie jeu.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj Theo Ajout fonction jouer_partie jeu.h" />
   </component>
 </project>

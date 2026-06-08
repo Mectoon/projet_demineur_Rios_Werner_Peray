@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "sauvegarde.h"
 
 void afficherMenuDemineur(void) {
     printf("\n");
@@ -554,4 +555,74 @@ int partie_gagnee(Partie *p) {
 
     // Si toutes les cases sans mine sont révélées, la partie est gagnée
     return 1;
+}
+
+
+void jouer_partie(Partie *p) {
+    int action;
+    int ligne;
+    int colonne;
+
+    while (p->vies > 0 && p->etat == 0) {
+
+        gestion_malus(p);
+
+        if (donner_sa_langue_au_chat(p) == 1)
+        {
+            afficher_grille_reveal(p);
+        }
+        else
+        {
+            afficher_grille(p);
+        }
+
+        printf("Vies restantes : %d\n", p->vies);
+        printf("Tour : %d\n", p->tour);
+
+        printf("\n1) Jouer un coup\n");
+        printf("2) Sauvegarder et revenir au menu\n");
+        printf("3) Revenir au menu sans sauvegarder\n");
+        printf("Votre choix : ");
+        scanf("%d", &action);
+
+        switch (action) {
+
+            case 1:
+                printf("Choisissez une ligne : ");
+                scanf("%d", &ligne);
+
+                printf("Choisissez une colonne : ");
+                scanf("%d", &colonne);
+
+                reveler_case(p, ligne, colonne);
+
+                if (p->vies <= 0) {
+                    p->etat = 2;
+                    printf("\nVous avez perdu la partie.\n");
+                    return;
+                }
+
+                if (partie_gagnee(p) == 1) {
+                    p->etat = 1;
+                    printf("\nBravo ! Vous avez gagne la partie.\n");
+                    return;
+                }
+
+                p->tour++;
+                break;
+
+            case 2:
+                SAUV_sauvegarde(p);
+                printf("\nPartie sauvegardee. Retour au menu.\n");
+                return;
+
+            case 3:
+                printf("\nRetour au menu sans sauvegarder.\n");
+                return;
+
+            default:
+                printf("\nChoix invalide.\n");
+                break;
+        }
+    }
 }
