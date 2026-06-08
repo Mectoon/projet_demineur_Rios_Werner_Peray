@@ -201,7 +201,6 @@ void creer_tableau_vide(Partie *p, int taille) {
             // calculer_mines_autour() changera ce paramètre
             p->grille[i][j].nb_mines = 0;
             p->grille[i][j].bonus = 0;
-            p->grille[i][j].bonus_reveal = 0;
             p->grille[i][j].malus = 0;
         }
     }
@@ -238,7 +237,6 @@ void placer_bombes(Partie *p){
 void placer_bonus_malus(Partie *p) {
     int bonus_places;
     int malus_places;
-    int bonus_reveal_place;
     int ligne;
     int colonne;
 
@@ -248,7 +246,6 @@ void placer_bonus_malus(Partie *p) {
 
     bonus_places = 0;
     malus_places = 0;
-    bonus_reveal_place = 0;
 
     // Placement des bonus vies
     while (bonus_places < p->nb_bonus) {
@@ -260,7 +257,6 @@ void placer_bonus_malus(Partie *p) {
         // Vérification case libre
         if (p->grille[ligne][colonne].mine == 0 &&
             p->grille[ligne][colonne].bonus == 0 &&
-            p->grille[ligne][colonne].bonus_reveal == 0 &&
             p->grille[ligne][colonne].malus == 0) {
 
             p->grille[ligne][colonne].bonus = 1;
@@ -277,32 +273,13 @@ void placer_bonus_malus(Partie *p) {
         // Vérification case libre
         if (p->grille[ligne][colonne].mine == 0 &&
             p->grille[ligne][colonne].bonus == 0 &&
-            p->grille[ligne][colonne].bonus_reveal == 0 &&
             p->grille[ligne][colonne].malus == 0) {
 
             p->grille[ligne][colonne].malus = 1;
             malus_places++;
         }
     }
-
-    // Placement du bonus reveal unique
-    while (bonus_reveal_place == 0) {
-
-        ligne = rand() % p->taille;
-        colonne = rand() % p->taille;
-
-        if (p->grille[ligne][colonne].mine == 0 &&
-            p->grille[ligne][colonne].bonus == 0 &&
-            p->grille[ligne][colonne].bonus_reveal == 0 &&
-            p->grille[ligne][colonne].malus == 0) {
-
-            p->grille[ligne][colonne].bonus_reveal = 1;
-            bonus_reveal_place = 1;
-        }
-    }
 }
-
-
 
  /* Pour chaque case, on regarde les 8 cases voisines :
  * - haut
@@ -473,11 +450,6 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         printf("Genial ! Vous avez gagne une vie.\n");
         p->vies++;
     }
-
-    // Si la case contient un bonus revelation, on affiche les mines
-    if (p->grille[ligne][colonne].bonus_reveal == 1) {
-        printf("Bonus revelation active !\n");
-        printf("Positions des mines : ");
 
         // Parcours de toute la grille pour afficher les mines
         for (i = 0; i < p->taille; i++) {

@@ -22,7 +22,6 @@ typedef struct {
     int nb_mines;      // nombre de mines autour de la case
 
     int bonus;         // 1 = bonus present, 0 = pas de bonus
-    int bonus_reveal;  // 1 = bonus revelation present, 0 = pas de bonus revelation
     int malus;         // 1 = malus présent à cette case , 0 = pas de malus présent à cette case
 } Case;
 
