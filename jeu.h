@@ -227,5 +227,12 @@ au moins une case sans mine qui n'a pas encore ete revelee.
 - sinon, elle retourne 0
 */
 int partie_gagnee(Partie *p);
+/*
+Vérifie si la partie est gagnée.
+La fonction parcourt toute la grille et regarde s'il reste
+au moins une case sans mine qui n'a pas encore été révélée.
+- si toutes les cases sans mine sont révélées, 1
+- sinon, 0
+*/
 
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
