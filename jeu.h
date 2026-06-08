@@ -235,4 +235,11 @@ au moins une case sans mine qui n'a pas encore été révélée.
 - sinon, 0
 */
 
+void jouer_partie(Partie *p);
+/*
+Gere le deroulement complet d'une partie :
+affichage de la grille, choix d'une action,
+revelation d'une case, sauvegarde, victoire ou defaite.
+*/
+
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
