@@ -2,6 +2,7 @@
 #include "jeu.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 void afficherMenuDemineur(void) {
     printf("\n");
@@ -32,9 +33,9 @@ void afficher_regles(void)
     printf("\n");
 
     printf("MODE BONUS / MALUS :\n");
-    printf("- 3 vies au depart\n");
+    printf("- 1 vie au depart\n");
     printf("- bonus : +1 vie\n");
-    printf("- bonus revelation : affiche les positions des mines\n");
+    printf("- bonus revelation : affiche les positions des mines si le joueur a 2 vies\n");
     printf("- malus : cache la grille pendant 2 tours\n\n");
     printf("\n");
 
@@ -92,7 +93,7 @@ void lancer_nouvelle_partie(Partie *p) {
     }
     else
     {
-        p->vies = 3;
+        p->vies = 1;
     }
 
     creer_tableau_vide(p, taille);
@@ -349,49 +350,123 @@ void calculer_mines_autour(Partie *p) {
     }
 }
 
+int donner_sa_langue_au_chat(Partie *p){
 
+    int reponse = 0;
 
- /* Si une case est cachée, on affiche "-"
- * Si une case est visible :
- * - on affiche X si c'est une mine
- * - sinon on affiche le nombre de mines autour
- */
-void afficher_grille(Partie *p) {
+    // Le bonus reveal est proposé uniquement en mode Bonus/Malus
+    // et seulement lorsque le joueur possède exactement 2 vies.
+    if (p->mode == 2 && p->vies == 2)
+    {
+        while (reponse != 1 && reponse != 2) {
+            printf("Vous avez 2 vies.\n");
+            printf("Voulez-vous echanger 1 vie contre la vision de la grille ?\n");
+            printf("1) Oui\n");
+            printf("2) Non\n");
+            printf("Votre choix : ");
+            scanf("%d", &reponse);
+        }
+
+        // Si le joueur accepte, il perd une vie
+        // et la fonction indique qu'il faut afficher la grille reveal.
+        if (reponse == 1)
+        {
+            p->vies--;
+            return 1;
+        }
+    }
+
+    // Aucun reveal demandé
+    return 0;
+}
+
+void afficher_grille_reveal(Partie *p)
+{
     int i;
     int j;
 
-    printf("\n   ");
+    printf("\n--- BONUS REVEAL ---\n");
 
     // Affichage des numéros de colonnes
+    printf("\n   ");
     for (j = 0; j < p->taille; j++) {
         printf("%2d ", j);
     }
 
     printf("\n");
 
-    // Parcours des lignes de la grille
+    // Affichage de la grille
+    for (i = 0; i < p->taille; i++) {
+
+        // Affichage du numéro de ligne
+        printf("%2d ", i);
+
+        for (j = 0; j < p->taille; j++) {
+
+            // Si la case contient une mine, on affiche X
+            if (p->grille[i][j].mine == 1) {
+                printf(" X ");
+            }
+
+            // Sinon, on affiche une case cachée
+            else {
+                printf(" - ");
+            }
+        }
+
+        printf("\n");
+    }
+
+    printf("\nLa grille normale va se reafficher dans 3 secondes...\n");
+
+    //attente des 3 secondes (aide grâce à l'ia
+#ifdef _WIN32
+    Sleep(3000);
+#else
+    sleep(3);
+#endif
+
+    afficher_grille(p);
+}
+ /* Si une case est cachée, on affiche "-"
+ * Si une case est visible :
+ * - on affiche X si c'est une mine
+ * - sinon on affiche le nombre de mines autour
+ */
+void afficher_grille(Partie *p)
+{
+    int i;
+    int j;
+
+    // Affichage des numéros de colonnes
+    printf("\n   ");
+    for (j = 0; j < p->taille; j++) {
+        printf("%2d ", j);
+    }
+    printf("\n");
+
+    // Affichage de chaque case de la grille
     for (i = 0; i < p->taille; i++) {
         printf("%2d ", i);
 
-        // Parcours des colonnes de la ligne
         for (j = 0; j < p->taille; j++) {
 
-            // Si un malus est actif, toute la grille est brouilée
+            // Si un malus est actif, toute la grille est cachée
             if (p->malus == 1) {
                 printf(" ? ");
             }
 
-            // Si la case est cachée
+            // Case non révélée
             else if (p->grille[i][j].visible == 0) {
                 printf(" - ");
             }
+
+            // Case révélée
             else {
-                // Si la case contient une mine
                 if (p->grille[i][j].mine == 1) {
                     printf(" X ");
                 }
                 else {
-                    // Sinon on affiche le nombre de lignes autour
                     printf(" %d ", p->grille[i][j].nb_mines);
                 }
             }
@@ -451,18 +526,9 @@ void reveler_case(Partie *p, int ligne, int colonne) {
         p->vies++;
     }
 
-        // Parcours de toute la grille pour afficher les mines
-        for (i = 0; i < p->taille; i++) {
-            for (j = 0; j < p->taille; j++) {
-                if (p->grille[i][j].mine == 1) {
-                    printf("(%d,%d) ", i, j);
-                }
-            }
-        }
-
         printf("\n");
-    }
 }
+
 void gestion_malus(Partie *p){
     if (p->malus == 1 && p->tour > p->tour_malus) {
         p->malus = 0;

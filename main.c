@@ -70,7 +70,14 @@ void jouer_partie(Partie *p) {
     while (p->vies > 0 && p->etat == 0) {  // Tant que le joueur a encore au moins une vie et que la partie est encore en cours, on continue la boucle de jeu
 
         gestion_malus(p);
-        afficher_grille(p);
+        if (donner_sa_langue_au_chat(p) == 1)
+        {
+            afficher_grille_reveal(p);
+        }
+        else
+        {
+            afficher_grille(p);
+        }
 
         printf("Vies restantes : %d\n", p->vies);
         printf("Tour : %d\n", p->tour);

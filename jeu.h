@@ -159,6 +159,23 @@ void placer_bonus_malus(Partie *p);
  */
 void calculer_mines_autour(Partie *p);
 
+/**
+ * @brief Demande si le joueur veut echanger une vie contre le bonus reveal
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return 1 si oui, 2 si non.
+ */
+int donner_sa_langue_au_chat(Partie *p);
+
+/**
+ * @brief affiche la grille suivant donner_sa_langue_au_chat
+ *puis affiche de nouveau la grille normale au bout de 3 secondes.
+ *
+ * @param p Pointeur vers la structure Partie.
+ * @return Rien.
+ */
+void afficher_grille_reveal(Partie *p);
+
 
 /**
  * @brief Affiche la grille de jeu.
@@ -187,6 +204,8 @@ void afficher_grille(Partie *p);
  * @return Rien.
  */
 void reveler_case(Partie *p, int ligne, int colonne);
+
+
 /**
  * @brief Met à jour l'état du malus en fonction du nombre de tours restants avec le malus activé.
  *
@@ -198,6 +217,8 @@ void reveler_case(Partie *p, int ligne, int colonne);
  * @return Rien.
  */
 void gestion_malus(Partie *p);
+
+
 /**
 Verifie si la partie est gagnee.
 La fonction parcourt toute la grille et regarde s'il reste
