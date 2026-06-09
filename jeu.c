@@ -421,46 +421,66 @@ void afficher_grille(Partie *p){
 
 
 void reveler_case(Partie *p, int ligne, int colonne){
-    int i;
-    int j;
+    int dl;
+    int dc;
+    int ligne_voisine;
+    int colonne_voisine;
 
-    // Vérification : la ligne et la colonne doivent être dans la grille
-    if (ligne < 0 || ligne >= p->taille ||
-        colonne < 0 || colonne >= p->taille){
-        printf("Coordonnees invalides.\n");
+    //On vérifie que les coordonnées sont dans la grille
+    if (ligne < 0 || ligne >= (*p).taille ||
+        colonne < 0 || colonne >= (*p).taille){
         return;
         }
 
-    // Si la case est déjà visible, on ne peut pas la rejouer
-    if (p->grille[ligne][colonne].visible == 1){
-        printf("Cette case est deja visible.\n");
+    //Si la case est déjà visible, on ne fait rien
+    if ((*p).grille[ligne][colonne].visible == 1){
         return;
     }
-    // On rend la case visible
-    p->grille[ligne][colonne].visible = 1;
 
-    // Si la case contient une mine, le joueur perd une vie
-    if (p->grille[ligne][colonne].mine == 1){
+    (*p).grille[ligne][colonne].visible = 1;
+
+    if ((*p).grille[ligne][colonne].mine == 1){
         printf("Mine touchee !\n");
-        p->vies--;
+
+        (*p).vies--;
+
+        if ((*p).vies <= 0){
+            (*p).etat = 2; // partie perdue
+        }
+        return;
     }
 
-    // Si la case contient un malus, il s'active pendant 2 tours
-    if (p->grille[ligne][colonne].malus == 1){
-        printf("Un malus a ete active !\n");
-        printf("La grille sera cachee pendant 2 tours.\n");
+    //Si la case contient un bonus
+    if ((*p).grille[ligne][colonne].bonus == 1){
+        printf("Bonus trouve ! Vous gagnez une vie.\n");
+        (*p).vies++;
+    }
+    //Si la case contient un malus
+    if ((*p).grille[ligne][colonne].malus == 1){
+        printf("Malus trouve ! Grille brouillee pendant 2 tours.\n");
+        (*p).malus = 1;
+        (*p).tour_malus = (*p).tour + 2;
+    }
 
-        // Le malus devient actif
-        p->malus = 1;
-        // On enregistre jusqu'à quel tour le malus reste actif
-        p->tour_malus = p->tour + 2;
+    // Si la case contient un nombre supérieur à 0, on ne révèle pas les cases autour
+    if ((*p).grille[ligne][colonne].nb_mines != 0){
+        return;
     }
-    // Si la case contient un bonus, le joueur gagne une vie
-    if (p->grille[ligne][colonne].bonus == 1) {
-        printf("Genial ! Vous avez gagne une vie.\n");
-        p->vies++;
+
+    //Si la case vaut 0, on révèle les 8 cases autour
+    for (dl = -1; dl <= 1; dl++) {
+        for (dc = -1; dc <= 1; dc++) {
+
+            //On ne rappelle pas la fonction sur la case elle-même
+            if (!(dl == 0 && dc == 0)) {
+
+                ligne_voisine = ligne + dl;
+                colonne_voisine = colonne + dc;
+
+                reveler_case(p, ligne_voisine, colonne_voisine);
+            }
+        }
     }
-        printf("\n");
 }
 
 void gestion_malus(Partie *p){

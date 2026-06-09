@@ -28,10 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Theo Ajout fonction jouer_partie jeu.h">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Axel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +68,12 @@
     &quot;assignee&quot;: &quot;Mectoon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git&quot;,
-    &quot;accountId&quot;: &quot;d3b3b0d2-53ac-486c-828d-ddc675a5d4c1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git",
+    "accountId": "f99be411-7b98-4fd8-89db-7379fae63213"
   }
-}</component>
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lbOndN6m" />
   </component>
@@ -146,6 +145,7 @@
       <workItem from="1780402658968" duration="1626000" />
       <workItem from="1780404324333" duration="2752000" />
       <workItem from="1780945641459" duration="894000" />
+      <workItem from="1781012880273" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -370,7 +370,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MàJ Axel" />
     <MESSAGE value="MàJ Jules, début déroulement main.c" />
     <MESSAGE value="Maj Théodore, jeu.h" />
     <MESSAGE value="Maj Théodore, jeu.c regles du jeu" />
@@ -389,6 +388,7 @@
     <MESSAGE value="MàJ AXEL" />
     <MESSAGE value="Maj Theo explication fonction partie gagnée" />
     <MESSAGE value="Maj Theo Ajout fonction jouer_partie jeu.h" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj Theo Ajout fonction jouer_partie jeu.h" />
+    <MESSAGE value="MàJ Axel" />
+    <option name="LAST_COMMIT_MESSAGE" value="MàJ Axel" />
   </component>
 </project>

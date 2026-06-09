@@ -210,15 +210,22 @@ void afficher_grille_reveal(Partie *p);
  */
 void afficher_grille(Partie *p);
 
-
 /**
- * @brief Revele une case choisie par le joueur.
+ * @brief Revele une case choisie par le joueur et applique ses effets.
  *
- * La fonction verifie d'abord si les coordonnees sont valides.
- * Si la case contient une mine, on perd une vie.
+ * La fonction verifie d'abord que les coordonnees sont dans la grille.
+ * Si la case est deja visible, elle ne fait rien.
+ *
+ * Si la case contient une mine, le joueur perd une vie.
+ * Si le joueur n'a plus de vie, l'etat de la partie passe a perdu.
+ *
  * Si la case ne contient pas de mine, elle devient visible.
- * Si la case revelee contient 0 mine autour, les cases voisines sont revelees automatiquement.
- * Si il y a un bonus ou malus on l'applique.
+ * Si elle contient un bonus, le bonus est applique.
+ * Si elle contient un malus, le malus est applique.
+ *
+ * Si la case revelee contient 0 mine autour, les cases voisines
+ * sont revelees automatiquement. Cette revelation peut se propager
+ * tant que les cases voisines ont aussi 0 mine autour.
  *
  * @param p Pointeur vers la structure Partie.
  * @param ligne Ligne de la case a reveler.
