@@ -1,16 +1,14 @@
-//
-// Created by arios on 27/05/2026.
-//
-
 #ifndef PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 
 #define PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 #include "jeu.h"
+
 /**
  * @brief Efface tout le contenu du fichier sauvegarde.csv
  * @return Rien.
  */
 void SAUV_initialisation();
+
 /**
  * @brief Charge la dernière partie sauvegardée en lisant directement les 5 dernières lignes du fichier.
  *
@@ -23,6 +21,7 @@ void SAUV_initialisation();
  * @return Rien.
  */
 int SAUV_charger_partie(Partie *p);
+
 /**
  * @brief Charge des coordonnées de la forme x-y dans la grille.
  *
@@ -65,6 +64,7 @@ void SAUV_charger_coordonnees(Partie *p, const char *ligne, const char *champ);
  * @param p Pointeur vers la structure Partie contenant l'état actuel du jeu.
  */
 void SAUV_sauvegarde(Partie *p);
+
 /**
  * @brief Sauvegarde dans le fichier CSV les coordonnées des cases possédant
  *        une propriété donnée (mine, visible, bonus ou malus).
@@ -81,5 +81,7 @@ void SAUV_sauvegarde(Partie *p);
  * ("mine", "visible", "bonus", "malus").
  */
 void SAUV_ecrire_coordonnees(Partie *p, FILE *f, const char *champ);
+
+
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_SAUVEGARDE_H
 

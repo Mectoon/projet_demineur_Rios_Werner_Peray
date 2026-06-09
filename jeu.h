@@ -1,13 +1,7 @@
-//
-// Created by arios on 27/05/2026.
-//
-
 #ifndef PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
 #define PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 #define max 12
 #define FICHIER_SAUVEGARDE "sauvegarde.csv"
@@ -110,7 +104,6 @@ void lancer_nouvelle_partie(Partie *p);
  */
 void demarrer_chrono(Partie *p);
 
-
 /**
  * @brief Calcul le score suivant le temps et l'enregistre dans p->score.
  *
@@ -119,7 +112,6 @@ void demarrer_chrono(Partie *p);
  */
 void calculer_score(Partie *p);
 
-
 /**
  * @brief affiche le score suivant le temps mis en secondes ou en minutes.
  *
@@ -127,7 +119,6 @@ void calculer_score(Partie *p);
  * @return Rien.
  */
 void afficher_score(Partie *p);
-
 
 /**
  * @brief Calcule le nombre de mines en fonction de la taille de la grille et de la difficulte.
@@ -143,7 +134,6 @@ void afficher_score(Partie *p);
  */
 void calculer_nombre_mines(Partie *p);
 
-
 /**
  * @brief Initialise une grille vide selon la taille donnee.
  *
@@ -156,7 +146,6 @@ void calculer_nombre_mines(Partie *p);
  */
 void creer_tableau_vide(Partie *p, int taille);
 
-
 /**
  * @brief Place aleatoirement les bombes dans la grille.
  *
@@ -168,7 +157,6 @@ void creer_tableau_vide(Partie *p, int taille);
  * @return Rien.
  */
 void placer_bombes(Partie *p);
-
 
 /**
  * @brief Place aleatoirement les bonus et les malus dans la grille.
@@ -230,6 +218,7 @@ void afficher_grille(Partie *p);
  * Si la case contient une mine, on perd une vie.
  * Si la case ne contient pas de mine, elle devient visible.
  * Si la case revelee contient 0 mine autour, les cases voisines sont revelees automatiquement.
+ * Si il y a un bonus ou malus on l'applique.
  *
  * @param p Pointeur vers la structure Partie.
  * @param ligne Ligne de la case a reveler.
@@ -253,26 +242,26 @@ void gestion_malus(Partie *p);
 
 
 /**
-Verifie si la partie est gagnee.
-La fonction parcourt toute la grille et regarde s'il reste
-au moins une case sans mine qui n'a pas encore ete revelee.
-- si toutes les cases sans mine sont revelees, elle retourne 1
-- sinon, elle retourne 0
+ *@brief Verifie si la partie est gagnee.
+ *
+ * La fonction parcourt toute la grille et regarde s'il reste
+ * au moins une case sans mine qui n'a pas encore ete revelee.
+ * si toutes les cases sans mine sont revelees, elle retourne 1
+ * sinon, elle retourne 0
+ * @param p Pointeur vers la structure Partie.
+ * @return l'état de la partie : 1/0.
 */
 int partie_gagnee(Partie *p);
-/**
-Vérifie si la partie est gagnée.
-La fonction parcourt toute la grille et regarde s'il reste
-au moins une case sans mine qui n'a pas encore été révélée.
-- si toutes les cases sans mine sont révélées, 1
-- sinon, 0
-*/
 
-void jouer_partie(Partie *p);
 /**
-Gere le deroulement complet d'une partie :
-affichage de la grille, choix d'une action,
-revelation d'une case, sauvegarde, victoire ou defaite.
+ *@brief Gere le deroulement de la partie.
+ *
+* affichage de la grille, choix d'une action,
+* revelation d'une case, sauvegarde, victoire ou defaite.
+*
+* @param p Pointeur vers la structure Partie.
+* @return Rien
 */
+void jouer_partie(Partie *p);
 
 #endif //PROJET_DEMINEUR_RIOS_WERNER_PERAY_JEU_H

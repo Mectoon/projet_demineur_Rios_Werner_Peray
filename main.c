@@ -2,6 +2,7 @@
 #include "jeu.h"
 #include "sauvegarde.h"
 #include <stdlib.h>
+#include <time.h>
 
 int main(void) {
     int choix;          // Choix de l'utilisateur dans le menu
@@ -17,7 +18,7 @@ int main(void) {
     }
 
     while (quitter == 0) {
-        afficherMenuDemineur();
+        afficher_menu_demineur();
 
         printf("Votre choix : ");
         scanf("%d", &choix);
