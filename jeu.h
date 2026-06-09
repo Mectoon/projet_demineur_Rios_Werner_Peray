@@ -227,7 +227,7 @@ au moins une case sans mine qui n'a pas encore ete revelee.
 - sinon, elle retourne 0
 */
 int partie_gagnee(Partie *p);
-/*
+/**
 Vérifie si la partie est gagnée.
 La fonction parcourt toute la grille et regarde s'il reste
 au moins une case sans mine qui n'a pas encore été révélée.
@@ -236,7 +236,7 @@ au moins une case sans mine qui n'a pas encore été révélée.
 */
 
 void jouer_partie(Partie *p);
-/*
+/**
 Gere le deroulement complet d'une partie :
 affichage de la grille, choix d'une action,
 revelation d'une case, sauvegarde, victoire ou defaite.

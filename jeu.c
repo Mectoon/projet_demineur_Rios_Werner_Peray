@@ -605,6 +605,8 @@ void jouer_partie(Partie *p) {
                 if (partie_gagnee(p) == 1) {
                     p->etat = 1;
                     printf("\nBravo ! Vous avez gagne la partie.\n");
+                    calculer_score(p);
+                    afficher_score(p);
                     return;
                 }
 

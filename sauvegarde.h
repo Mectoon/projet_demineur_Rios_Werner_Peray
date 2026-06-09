@@ -69,7 +69,7 @@ void SAUV_sauvegarde(Partie *p);
  * @brief Sauvegarde dans le fichier CSV les coordonnées des cases possédant
  *        une propriété donnée (mine, visible, bonus ou malus).
  *
- * Parcourt toute la grille et écrit "i-j," pour chaque case où la propriété
+ * Parcours de toute la grille et écrit "i-j," pour chaque case où la propriété
  * indiquée par "champ" vaut 1. Termine toujours par un retour à la ligne.
  * "champ" est un "const char *" car la fonction ne modifie jamais
  * la chaîne : elle est utilisée uniquement pour "retrouver" le paramètre
