@@ -50,24 +50,57 @@ typedef struct {
 
 } Partie;
 
-void afficherMenuDemineur(void);
+/**
+ *@brief Affiche le menu principal du jeu Démineur.
+ *
+ * - lancer une nouvelle partie,
+ * - reprendre une partie sauvegardée,
+ * - quitter le jeu,
+ * - afficher les règles.
+ *
+ * Elle ne modifie aucune donnée du jeu.
+ * @return Rien.
+ */
+void afficher_menu_demineur(void);
 
+/**
+ *@brief Affiche les règles du jeu.
+ *
+ *Explique le but du démineur, les conditions de victoire
+ * et de défaite, ainsi que les différences entre les deux modes de jeu :
+ * - mode classique,
+ * - mode bonus/malus.
+ *
+ * Elle sert uniquement à informer le joueur.
+ * @return Rien.
+ */
 void afficher_regles(void);
-/*
-Affiche les règles du démineur lorsque l'utilisateur choisit 4 dans le menu.
-*/
 
+/**
+ *@brief Initialise une nouvelle partie de démineur.
+ *
+ * Cette fonction demande au joueur :
+ * - la taille de la grille,
+ * - le niveau de difficulté,
+ * - le mode de jeu.
+ *
+ * Elle initialise ensuite les paramètres de la structure Partie :
+ * - difficulté,
+ * - mode,
+ * - état de la partie,
+ * - nombre de vies,
+ * - compteur de tours,
+ * - malus.
+ *
+ * Elle crée ensuite la grille, calcule le nombre de mines,
+ * place les mines, ajoute les bonus/malus si nécessaire,
+ * calcule les mines autour de chaque case,
+ * démarre le chronomètre et affiche la grille de départ.
+ *
+ *@param : p Pointeur vers la structure Partie.
+ *@return Rien.
+ */
 void lancer_nouvelle_partie(Partie *p);
-/*
-Demande à l'utilisateur la taille, la difficulté et le mode de jeu.
-Puis elle appelle les fonctions déjà faites :
-- creer_tableau_vide
-- calculer_nombre_mines
-- placer_bombes
-- placer_bonus_malus si mode bonus/malus
-- calculer_mines_autour
-- afficher_grille
-*/
 
 /**
  * @brief Demarre le chronometre et initialise p->temps a 0s.

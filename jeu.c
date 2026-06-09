@@ -5,7 +5,7 @@
 #include <windows.h>
 #include "sauvegarde.h"
 
-void afficherMenuDemineur(void) {
+void afficher_menu_demineur(void) {
     printf("\n");
     printf("*------------------------------*\n");
     printf("*----- Jeu de DEMINEUR -----*\n");
@@ -17,8 +17,8 @@ void afficherMenuDemineur(void) {
     printf("Par Axel, Jules et Theodore\n");
 }
 
-void afficher_regles(void)
-{
+void afficher_regles(void){
+
     printf("\n");
     printf("*------------------------------*\n");
     printf("        REGLES DU JEU         \n");
@@ -260,7 +260,6 @@ void placer_bonus_malus(Partie *p) {
         if (p->grille[ligne][colonne].mine == 0 &&
             p->grille[ligne][colonne].bonus == 0 &&
             p->grille[ligne][colonne].malus == 0) {
-
             p->grille[ligne][colonne].bonus = 1;
             bonus_places++;
         }
@@ -420,7 +419,7 @@ void afficher_grille_reveal(Partie *p)
 
     printf("\nLa grille normale va se reafficher dans 3 secondes...\n");
 
-    //attente des 3 secondes (aide grâce à l'ia
+    //attente des 3 secondes (aide de l'ia)
 #ifdef _WIN32
     Sleep(3000);
 #else
