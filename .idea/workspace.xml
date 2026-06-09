@@ -28,12 +28,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ AXEL">
+    <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="Maj Theo Ajout fonction jouer_partie jeu.h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sauvegarde.h" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,15 +347,7 @@
       <option name="project" value="LOCAL" />
       <updated>1780946052905</updated>
     </task>
-    <task id="LOCAL-00026" summary="MàJ AXEL">
-      <option name="closed" value="true" />
-      <created>1781009984610</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1781009984610</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,9 +386,9 @@
     <MESSAGE value="Maj sauvegarde.c correction certaines ligne Theodore" />
     <MESSAGE value="Maj main.c deroulement partie" />
     <MESSAGE value="Maj jeu.c Regles du jeu Theodore" />
+    <MESSAGE value="MàJ AXEL" />
     <MESSAGE value="Maj Theo explication fonction partie gagnée" />
     <MESSAGE value="Maj Theo Ajout fonction jouer_partie jeu.h" />
-    <MESSAGE value="MàJ AXEL" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ AXEL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj Theo Ajout fonction jouer_partie jeu.h" />
   </component>
 </project>
