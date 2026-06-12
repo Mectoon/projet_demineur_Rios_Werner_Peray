@@ -247,7 +247,6 @@ void reveler_case(Partie *p, int ligne, int colonne);
  */
 void gestion_malus(Partie *p);
 
-
 /**
  *@brief Verifie si la partie est gagnee.
  *

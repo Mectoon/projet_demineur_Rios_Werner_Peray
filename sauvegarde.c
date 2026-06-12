@@ -3,6 +3,7 @@
 #include <string.h>
 #include "sauvegarde.h"
 #include  "jeu.h"
+
 void SAUV_initialisation(){
     FILE *f = fopen("..\\sauvegarde.csv", "w"); // Ouverture du fichier sauvegarde.csv en mode sur écriture
     if (f == NULL) // Vérification de la réussite de l'ouverture du fichier

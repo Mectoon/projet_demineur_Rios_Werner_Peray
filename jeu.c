@@ -247,7 +247,6 @@ void placer_bonus_malus(Partie *p){
     }
 }
 
-
 void calculer_mines_autour(Partie *p){
     int i;
     int j;

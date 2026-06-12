@@ -31,6 +31,8 @@
     <list default="true" id="39fb6f70-9323-496b-ae8b-d84ce603d623" name="Changes" comment="MàJ Axel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu.c" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sauvegarde.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sauvegarde.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,12 +70,12 @@
     &quot;assignee&quot;: &quot;Mectoon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git",
-    "accountId": "f99be411-7b98-4fd8-89db-7379fae63213"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mectoon/projet_demineur_Rios_Werner_Peray.git&quot;,
+    &quot;accountId&quot;: &quot;f99be411-7b98-4fd8-89db-7379fae63213&quot;
   }
-}]]></component>
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lbOndN6m" />
   </component>
@@ -145,7 +147,13 @@
       <workItem from="1780402658968" duration="1626000" />
       <workItem from="1780404324333" duration="2752000" />
       <workItem from="1780945641459" duration="894000" />
-      <workItem from="1781012880273" duration="307000" />
+      <workItem from="1781012880273" duration="855000" />
+      <workItem from="1781016829848" duration="907000" />
+      <workItem from="1781072267797" duration="41000" />
+      <workItem from="1781073059852" duration="6000" />
+      <workItem from="1781105331081" duration="633000" />
+      <workItem from="1781157313067" duration="1439000" />
+      <workItem from="1781266432637" duration="1605000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ Axel">
       <option name="closed" value="true" />
@@ -347,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780946052905</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="MàJ Axel">
+      <option name="closed" value="true" />
+      <created>1781013410989</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1781013410989</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
