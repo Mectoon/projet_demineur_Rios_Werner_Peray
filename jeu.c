@@ -365,12 +365,13 @@ void afficher_grille_reveal(Partie *p){
         printf("\n");
     }
     printf("\nLa grille normale va se reafficher dans 3 secondes...\n");
-
-    //attente des 3 secondes (aide de l'ia)
+    //attente des 3 secondes
 #ifdef _WIN32
     Sleep(3000);
+    // test de compilation windows
 #else
     sleep(3);
+    // test compilation autre systèmes d'exploitations
 #endif
 
     afficher_grille(p);
